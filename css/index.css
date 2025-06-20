@@ -1,7 +1,12 @@
 p#introduction {
+    text-align: center;
     color: #dda9c6;
 }
 
 h1 {
+    text-align: center;
     color: #dda9c6;
+    font-weight: bold;
+    font-style: inherit;
+    background-color: white;
 }
