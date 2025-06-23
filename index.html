@@ -3,13 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>コンピュータサイエンス基礎実習クラス7-チーム7</title>
+    <title>猫のしぐさやその生態</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
-    <h1>～猫のしぐさやその生態～</h1>
-    <p id="introduction">このサイトでは可愛い猫の様々な生態や特長を紹介します。</p>
+    <!--h1とかでもいいけどheaderのほうがよりいいらしい。意味的に...?-->
+    <header>
+        <h1>～猫のしぐさやその生態～</h1>
+        <p id="introduction">このサイトでは可愛い猫の様々な生態や特長を紹介します。</p>
+    </header>
+    <!--mainについてもheaderと同じ。ただ、１つしか作っちゃダメ。-->
+    <main>
+        <nav><!--これもheaderとかといっしょで無くてもいい-->
+            <ul>
+                <li><a href="types.html">猫の種類について</a></li>
+                <li><a href="habits.html">猫の習性について</a></li>
+            </ul>
+        </nav>
+        <div id="image-area">
+            <img src="images/cute_cat.jpg" alt="可愛い猫のイメージ画像">
+        </div>
+    </main>
+    <!--footerは最後ってわかりやすいからつけるといい。著作者とか載せるとこらしい。-->
+    <footer><!--&copyは「コピーライト（著作権記号）」©をつけるのに必要-->
+        <p>&copy; 2024 チーム7</p>
+    </footer>
 </body>
 
 </html>

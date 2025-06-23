@@ -1,12 +1,87 @@
-p#introduction {
+body {
+    background-color: #f8f4ff;
+    font-family: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #444;
+    /*↑基本の文字の色*/
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffe0f0;
     text-align: center;
-    color: #dda9c6;
+    padding: 2em 1em 1em 1em;
+    border-bottom: 2px solid #ffbad0;
 }
 
 h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: #a05b8a;
+}
+
+#introduction {
+    font-size: 1.15em;
+    color: #5e4571;
+    margin-bottom: 1em;
+}
+
+nav ul {
+    list-style: none;
+    /*↑ulタグの・とか白丸を消す*/
+    padding: 0;
     text-align: center;
-    color: #dda9c6;
-    font-weight: bold;
-    font-style: inherit;
-    background-color: white;
+}
+
+nav ul li {
+    display: inline-block;
+    /*↑横並びにする*/
+    margin: 1em 2em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    /*↑aタグは下線がついちゃうからそれを消す*/
+    color: #fff;
+    background: #a05b8a;
+    padding: 0.7em 1.8em;
+
+    border-radius: 30px;
+    /*↑角を丸める*/
+    box-shadow: 2px 2px 7px #ffd6e5;
+    font-size: 1.1em;
+    transition: background 0.3s;
+    /*0.3sかけて背景色に変わる*/
+}
+
+nav ul li a:hover
+
+/*マウスカーソルが乗ったとき（ホバーしたとき）*/
+    {
+    background: #ffbad0;
+    color: #a05b8a;
+}
+
+#image-area {
+    display: flex;
+    justify-content: center;
+    /*画像を中央にするためにdisplayとかjustify-...ってした。*/
+    margin: 2em auto;
+}
+
+#image-area img {
+    max-width: 350px;
+    width: 80%;
+    border-radius: 16px;
+    box-shadow: 2px 2px 12px #dcb0f7;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #bbb;
+    margin-top: 2em;
+    padding: 1em 0;
+    background: #fdebfb;
+    border-top: 1px solid #ffe0f0;
 }
