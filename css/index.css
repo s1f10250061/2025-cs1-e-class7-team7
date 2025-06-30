@@ -5,6 +5,10 @@ body {
     /*↑基本の文字の色*/
     margin: 0;
     padding: 0;
+    min-height: 100vh; /* 画面全体の高さを確保 */
+    position: relative; /* background-scroll の基準 */
+    display: flex; /* header, main, footer を縦に並べるため */
+    flex-direction: column; /* header, main, footer を縦に並べるため */
 }
 
 header {
@@ -12,6 +16,8 @@ header {
     text-align: center;
     padding: 2em 1em 1em 1em;
     border-bottom: 2px solid #ffbad0;
+    position: relative; /* 背景の上に表示するため */
+    z-index: 10; /* 背景よりも手前に表示 */
 }
 
 h1 {
@@ -55,33 +61,67 @@ nav ul li a {
 }
 
 nav ul li a:hover
-
 /*マウスカーソルが乗ったとき（ホバーしたとき）*/
     {
     background: #ffbad0;
     color: #a05b8a;
 }
 
-#image-area {
-    display: flex;
-    justify-content: center;
-    /*画像を中央にするためにdisplayとかjustify-...ってした。*/
-    margin: 2em auto;
+main {
+    flex-grow: 1; /* コンテンツが少ない場合でも、残りのスペースを埋めてfooterを下に押し出す */
+    position: relative; /* 背景の上に表示するため */
+    z-index: 10; /* 背景よりも手前に表示 */
+    padding: 20px; /* 必要に応じてパディングを追加 */
 }
 
-#image-area img {
-    max-width: 350px;
-    width: 80%;
-    border-radius: 16px;
-    box-shadow: 2px 2px 12px #dcb0f7;
-}
 
 footer {
     text-align: center;
     font-size: 0.9em;
     color: #bbb;
-    margin-top: 2em;
+    margin-top: auto;/* main が flex-grow: 1 なので、footerを一番下に押し出す */
     padding: 1em 0;
     background: #fdebfb;
     border-top: 1px solid #ffe0f0;
+    position: relative; /* 背景の上に表示するため */
+    z-index: 10; /* 背景よりも手前に表示 */
+}
+
+.background-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-scroll::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 黒を40%透明で重ねる。 */
+    z-index: 1; /* scroll-images (z-index: auto) の上に、他のコンテンツ (z-index: 10) の下に配置 */
+}
+
+.scroll-images {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 0;
+}
+
+.scroll-images img {
+    width: 100vw;
+    /* 画面幅にあわせて画像を伸縮 */
+    height: 100vh;
+    object-fit: cover;
 }
