@@ -1,0 +1,93 @@
+body {
+    font-family: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #6b4c3b;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin: 0 0 1em 0;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
+b {
+    font-size: 1.2em;
+    display: block;
+    margin: 20px 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #a85d4f;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #e07b7b;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #eecfc2;
+    margin: 20px 0;
+}
+
+h2 {
+    background-color: #f9e1d9;
+    padding: 10px;
+    border-left: 8px solid #e07b7b;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: #5b3832;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+h2 + ul {
+    background-color: #fff4ec;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+h2 + ul + p {
+    background-color: #fcf0e7;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
