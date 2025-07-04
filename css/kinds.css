@@ -91,3 +91,30 @@ h2 + ul + p {
     margin-top: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
+body::after {
+    content: '🐾🐾🐾';
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: pawFall 2s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes pawFall {
+    0% {
+        transform: translateX(-50%) translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
