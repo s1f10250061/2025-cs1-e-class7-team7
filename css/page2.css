@@ -1,5 +1,32 @@
 
 
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('nekocyanPAKE4496-428.jpg');
+    }
+    33% {
+        background-image: url('nekocyanPAKE4500-430_TP_V.jpg');
+    }
+    66% {
+        background-image: url('nekocyanPAKE4496-428_TP_V.jpg');
+    }
+    100% {
+        background-image: url('cat126IMGL6488_TP_V.jpg');
+    }
+}
+
+/* head部分の背景にアニメーションを設定 */
+head {
+    position: relative;
+    height: 300px; 
+    animation: backgroundAnimation 5s infinite; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+
 * {
     margin: 0;
     padding: 0;
